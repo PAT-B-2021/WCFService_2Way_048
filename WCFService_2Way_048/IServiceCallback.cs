@@ -8,7 +8,7 @@ using System.Text;
 namespace WCFService_2Way_048
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
-    [ServiceContract]
+    [ServiceContract(CallbackContract =typeof(IClientCallback))]
     public interface IServiceCallback
     {
         [OperationContract(IsOneWay = true)]
